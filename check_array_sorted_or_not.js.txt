@@ -1,0 +1,21 @@
+function sort1(a,i,n)
+{
+    if(n==0 || n==1)
+    {
+        return true;
+    }
+    if(a[i]>a[i+1])
+    {
+        return false;
+    }
+    var small=sort1(a,i+1,n-1);
+    return small;
+}
+var a=[1,2,3,4,5];
+if(sort1(a,0,a.length)){
+  console.log("sorted");  
+}
+else
+{
+    console.log("unsorted");
+}

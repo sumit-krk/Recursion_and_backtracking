@@ -1,0 +1,10 @@
+function Gsum(k)
+{
+    if(k==0)
+    {
+        return 1;
+    }
+    var small=Gsum(k-1);
+    return small+1/(2**k);
+}
+console.log(Gsum(3));

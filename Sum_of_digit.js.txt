@@ -1,0 +1,11 @@
+function count(x)
+{
+    if(x==0)
+    {
+        return 0;
+    }
+    var small=count(Math.floor(x/10))
+    return small+(x%10)
+}
+var sum=0;
+console.log(count(343259));

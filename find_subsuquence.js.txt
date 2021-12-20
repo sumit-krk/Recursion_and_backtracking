@@ -1,0 +1,14 @@
+function subStr(s,ans,arr)
+{
+  if(s.length==0)
+  {
+    console.log(ans);
+    arr.push(ans);
+    return;
+  }
+  subStr(s.substring(1),ans,arr)
+  subStr(s.substring(1),ans+s[0],arr);
+}
+var arr=[];
+subStr("ABC","",arr)
+console.log(arr);

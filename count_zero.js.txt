@@ -1,0 +1,18 @@
+function count_zero(x)
+{
+    if(x==0)
+    {
+        return 0;
+    }
+    var check_small=count_zero(Math.floor(x/10));
+    var lastDigit=x%10;
+    if(lastDigit==0)
+    {
+        return check_small+1;
+    }
+    else
+    {
+        return check_small;
+    }
+}
+console.log(count_zero(2010170));
